@@ -1,0 +1,30 @@
+<div class="journal-container">
+  <h1>Journal Entry</h1>
+  <form [formGroup]="journalForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="entry_date">Entry Date</label>
+      <input type="date" id="entry_date" formControlName="entry_date" required>
+    </div>
+    <div class="form-group">
+      <label for="sleep_time">Previous Night's Sleep Time</label>
+      <input type="time" id="sleep_time" formControlName="sleep_time" required>
+    </div>
+    <div class="form-group">
+      <label for="wake_time">Wake Up Time</label>
+      <input type="time" id="wake_time" formControlName="wake_time" required>
+    </div>
+    <div class="form-group">
+      <label for="goals_completed_percentage">Goals Completed Percentage</label>
+      <input type="number" id="goals_completed_percentage" formControlName="goals_completed_percentage" min="0" max="100" required>
+    </div>
+    <div class="form-group">
+      <label for="tasks_completed">Tasks Completed</label>
+      <textarea id="tasks_completed" formControlName="tasks_completed" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea id="notes" formControlName="notes" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div> 
